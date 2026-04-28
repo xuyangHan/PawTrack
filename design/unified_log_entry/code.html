@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e3e2e0",
+                    "secondary-fixed": "#d0e4ff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#6dbb9a",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#faf9f7",
+                    "surface-container-high": "#e9e8e6",
+                    "on-surface": "#1a1c1b",
+                    "inverse-on-surface": "#f1f1ef",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f4f3f1",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#295783",
+                    "surface-dim": "#dadad8",
+                    "primary-fixed-dim": "#88d6b4",
+                    "on-secondary-fixed": "#001d35",
+                    "tertiary-fixed-dim": "#ffb780",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#34618d",
+                    "primary-fixed": "#a3f3cf",
+                    "on-primary-fixed-variant": "#00513a",
+                    "surface-container": "#efeeec",
+                    "on-tertiary-fixed": "#2f1400",
+                    "tertiary-container": "#ea9959",
+                    "on-primary-container": "#004a34",
+                    "on-background": "#1a1c1b",
+                    "inverse-surface": "#2f3130",
+                    "background": "#faf9f7",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e3e2e0",
+                    "on-secondary-fixed-variant": "#174974",
+                    "tertiary-fixed": "#ffdcc4",
+                    "on-surface-variant": "#3f4943",
+                    "secondary-fixed-dim": "#9fcafc",
+                    "on-secondary": "#ffffff",
+                    "primary": "#146b4f",
+                    "secondary-container": "#a2cdff",
+                    "outline": "#6f7a73",
+                    "surface-tint": "#146b4f",
+                    "on-primary-fixed": "#002115",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#8e4e14",
+                    "outline-variant": "#bec9c2",
+                    "on-tertiary-fixed-variant": "#6f3800",
+                    "on-tertiary-container": "#653200",
+                    "inverse-primary": "#88d6b4",
+                    "surface": "#faf9f7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-card": "0.75rem",
+                    "padding-card": "1rem",
+                    "stack-gap": "1.25rem",
+                    "margin-page": "1rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "body-sm": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "display-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["17px", {"lineHeight": "24px", "letterSpacing": "-0.4px", "fontWeight": "400"}],
+                    "body-sm": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.2px", "fontWeight": "400"}],
+                    "label-caps": ["13px", {"lineHeight": "18px", "letterSpacing": "0.5px", "fontWeight": "600"}],
+                    "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                    "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.5px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-lg text-on-background min-h-screen pb-24">
+<!-- TopAppBar Execution from JSON -->
+<header class="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-stone-200/50 dark:border-stone-800/50 flex justify-between items-center w-full px-4 h-16">
+<button class="hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors rounded-full p-2 active:opacity-70">
+<span class="material-symbols-outlined text-on-surface" data-icon="close">close</span>
+</button>
+<h1 class="font-['Manrope'] font-bold text-lg text-on-surface">New Log Entry</h1>
+<button class="font-['Manrope'] font-bold text-lg text-emerald-600 dark:text-emerald-400 px-2 active:opacity-70">
+            Save
+        </button>
+</header>
+<main class="max-w-xl mx-auto px-margin-page pt-6 space-y-stack-gap">
+<!-- Segmented Tab Bar -->
+<div class="bg-surface-container rounded-full p-1 flex items-center justify-between">
+<button class="flex-1 py-2.5 rounded-full text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm">
+                Activity
+            </button>
+<button class="flex-1 py-2.5 rounded-full text-body-sm font-medium text-on-surface-variant hover:bg-surface-container-high transition-all">
+                Nourishment
+            </button>
+<button class="flex-1 py-2.5 rounded-full text-body-sm font-medium text-on-surface-variant hover:bg-surface-container-high transition-all">
+                Medication
+            </button>
+</div>
+<!-- Event Type Grid -->
+<section class="space-y-3">
+<h2 class="text-label-caps uppercase text-outline px-1">Event Type</h2>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-primary-container/10 border-2 border-primary rounded-xl p-padding-card flex flex-col items-center justify-center text-center space-y-2 transition-all">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="pet_supplies" style="font-variation-settings: 'FILL' 1;">pet_supplies</span>
+</div>
+<span class="font-body-sm font-bold text-primary">Vomit</span>
+</div>
+<div class="bg-surface-container-lowest shadow-[0_4px_12px_rgba(0,0,0,0.04)] rounded-xl p-padding-card flex flex-col items-center justify-center text-center space-y-2 hover:bg-surface-container transition-all">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="opacity">opacity</span>
+</div>
+<span class="font-body-sm font-semibold text-on-surface-variant">Poop</span>
+</div>
+<div class="bg-surface-container-lowest shadow-[0_4px_12px_rgba(0,0,0,0.04)] rounded-xl p-padding-card flex flex-col items-center justify-center text-center space-y-2 hover:bg-surface-container transition-all">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<span class="font-body-sm font-semibold text-on-surface-variant">Behavior</span>
+</div>
+<div class="bg-surface-container-lowest shadow-[0_4px_12px_rgba(0,0,0,0.04)] rounded-xl p-padding-card flex flex-col items-center justify-center text-center space-y-2 hover:bg-surface-container transition-all">
+<div class="w-12 h-12 bg-surface-container rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</div>
+<span class="font-body-sm font-semibold text-on-surface-variant">Other</span>
+</div>
+</div>
+</section>
+<!-- Severity Slider -->
+<section class="bg-surface-container-lowest rounded-xl p-padding-card shadow-[0_4px_12px_rgba(0,0,0,0.04)] space-y-4">
+<div class="flex justify-between items-center">
+<h2 class="text-label-caps uppercase text-outline">Severity</h2>
+<span class="text-body-sm font-bold text-primary">Moderate</span>
+</div>
+<div class="relative py-4">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-1/2 bg-gradient-to-r from-primary-container to-primary"></div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-white border-2 border-primary rounded-full shadow-md"></div>
+</div>
+<div class="flex justify-between text-[11px] font-bold text-outline uppercase tracking-wider">
+<span>Mild</span>
+<span>Severe</span>
+</div>
+</section>
+<!-- Tags Section -->
+<section class="space-y-3">
+<h2 class="text-label-caps uppercase text-outline px-1">Symptoms &amp; Tags</h2>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-secondary-container/30 text-on-secondary-container rounded-full text-body-sm font-semibold border border-secondary-container/50">hairball</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface-variant rounded-full text-body-sm font-medium border border-outline-variant">diarrhea</button>
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface-variant rounded-full text-body-sm font-medium border border-outline-variant">lethargic</button>
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-low text-primary rounded-full">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</section>
+<!-- Photo Upload -->
+<section class="bg-surface-container-lowest rounded-xl p-padding-card shadow-[0_4px_12px_rgba(0,0,0,0.04)] border-2 border-dashed border-outline-variant flex flex-col items-center justify-center space-y-2 py-8 group hover:border-primary transition-colors cursor-pointer">
+<div class="w-14 h-14 bg-surface-container rounded-full flex items-center justify-center text-outline group-hover:text-primary group-hover:bg-primary-container/20 transition-all">
+<span class="material-symbols-outlined text-[32px]" data-icon="add_a_photo">add_a_photo</span>
+</div>
+<p class="text-body-sm font-semibold text-on-surface-variant group-hover:text-primary">Add visual evidence</p>
+<p class="text-[11px] text-outline">Optional • JPEG or PNG up to 10MB</p>
+</section>
+<!-- Notes Field -->
+<section class="space-y-3">
+<h2 class="text-label-caps uppercase text-outline px-1">Additional Notes</h2>
+<div class="relative">
+<textarea class="w-full bg-surface-container-lowest rounded-xl p-padding-card border-none ring-1 ring-inset ring-outline-variant focus:ring-2 focus:ring-primary h-32 text-body-lg placeholder:text-outline/50 shadow-[0_4px_12px_rgba(0,0,0,0.04)]" placeholder="Describe what happened..."></textarea>
+<div class="absolute bottom-3 right-3 text-[11px] text-outline font-medium">0 / 500</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Execution from JSON -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-safe pt-2 bg-white/90 dark:bg-stone-900/90 backdrop-blur-lg border-t border-stone-100 dark:border-stone-800 shadow-[0_-4px_12px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-emerald-500 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Manrope'] text-[11px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 rounded-2xl px-4 py-1 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-['Manrope'] text-[11px] font-medium">Logs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-emerald-500 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="monitor_heart">monitor_heart</span>
+<span class="font-['Manrope'] text-[11px] font-medium">Health</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-emerald-500 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

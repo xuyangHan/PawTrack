@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>PawTrack - Pet Wellness Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#146b4f",
+                        "on-primary-fixed": "#002115",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f4f3f1",
+                        "primary": "#146b4f",
+                        "tertiary-container": "#ea9959",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#001d35",
+                        "on-error": "#ffffff",
+                        "on-background": "#1a1c1b",
+                        "on-tertiary-fixed": "#2f1400",
+                        "outline": "#6f7a73",
+                        "surface-bright": "#faf9f7",
+                        "surface": "#faf9f7",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f3130",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-primary-fixed-variant": "#00513a",
+                        "surface-container": "#efeeec",
+                        "secondary-container": "#a2cdff",
+                        "primary-fixed-dim": "#88d6b4",
+                        "surface-dim": "#dadad8",
+                        "on-primary-container": "#004a34",
+                        "outline-variant": "#bec9c2",
+                        "on-secondary-fixed-variant": "#174974",
+                        "primary-container": "#6dbb9a",
+                        "secondary-fixed-dim": "#9fcafc",
+                        "background": "#faf9f7",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#ffdcc4",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#295783",
+                        "on-surface-variant": "#3f4943",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#34618d",
+                        "surface-variant": "#e3e2e0",
+                        "surface-container-high": "#e9e8e6",
+                        "on-surface": "#1a1c1b",
+                        "tertiary": "#8e4e14",
+                        "primary-fixed": "#a3f3cf",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "inverse-primary": "#88d6b4",
+                        "on-tertiary-container": "#653200",
+                        "secondary-fixed": "#d0e4ff",
+                        "inverse-on-surface": "#f1f1ef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "padding-card": "1rem",
+                        "margin-page": "1rem",
+                        "gutter-card": "0.75rem",
+                        "stack-gap": "1.25rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "label-caps": ["13px", {"lineHeight": "18px", "letterSpacing": "0.5px", "fontWeight": "600"}],
+                        "body-sm": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.2px", "fontWeight": "400"}],
+                        "body-lg": ["17px", {"lineHeight": "24px", "letterSpacing": "-0.4px", "fontWeight": "400"}],
+                        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #faf9f7;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-lg text-on-surface">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50 shadow-sm flex items-center justify-between px-4 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="Pet Profile Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly golden retriever with warm soft lighting and a blurred garden background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeGPZPJe9sSnYzPLjTzhB6TdteRs06jMRnafG4VE4c2V1jpBFm1TH_3UghurzRrcQUf89VpG5z6-nJr5JdHCCUz8lFKoe_Hm5E4isWJqq7JO3Q6a2eyUvvE1Od9NBnWZwvFv2FPfI3M1f1RAZx0qNmaJ2rl2QCo7D3n9uRuz-lCXZLJapnjSyyNDQdx6f8gEhoi8-gaEoLPOwPwB3H0qunfSHR8wbmvVVTV_ILF8X48Ant1RIfWMa9-e5r1KeUa622WXqWYQ2AclWW" style=""/>
+</div>
+<h1 class="font-manrope font-extrabold text-xl tracking-tight text-emerald-700" style="">PawTrack</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-stone-500 hover:opacity-80 transition-opacity active:scale-95 transition-transform" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-28 px-4 max-w-md mx-auto space-y-stack-gap">
+<!-- Profile Card -->
+<section class="bg-surface-container-lowest rounded-xl p-4 ios-shadow border border-surface-container-highest">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Luna" class="w-20 h-20 rounded-xl object-cover" data-alt="Full body shot of a happy golden retriever sitting on a wooden floor in a sunlit living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeGPZPJe9sSnYzPLjTzhB6TdteRs06jMRnafG4VE4c2V1jpBFm1TH_3UghurzRrcQUf89VpG5z6-nJr5JdHCCUz8lFKoe_Hm5E4isWJqq7JO3Q6a2eyUvvE1Od9NBnWZwvFv2FPfI3M1f1RAZx0qNmaJ2rl2QCo7D3n9uRuz-lCXZLJapnjSyyNDQdx6f8gEhoi8-gaEoLPOwPwB3H0qunfSHR8wbmvVVTV_ILF8X48Ant1RIfWMa9-e5r1KeUa622WXqWYQ2AclWW" style=""/>
+</div>
+<div class="flex-1">
+<h2 class="font-headline-md text-headline-md text-on-surface" style="">Luna</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm" style="">American Shorthair • 3 years old • 4.2 kg</p>
+</div>
+</div>
+</section>
+<!-- Quick Actions Section -->
+<section>
+<div class="flex justify-between items-center mb-3 px-1">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" style="">Quick Actions</h3>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container-lowest rounded-xl ios-shadow border border-surface-container-highest active:scale-95 transition-transform" style="">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/50 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary" style="">directions_walk</span>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface" style="">Log Activity</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container-lowest rounded-xl ios-shadow border border-surface-container-highest active:scale-95 transition-transform" style="">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed/50 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-tertiary" style="">restaurant</span>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface" style="">Log Food</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container-lowest rounded-xl ios-shadow border border-surface-container-highest active:scale-95 transition-transform" style="">
+<div class="w-12 h-12 rounded-full bg-primary-fixed/50 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary" style="">add</span>
+</div>
+<span class="font-label-caps text-[11px] text-on-surface" style="">Add</span>
+</button>
+</div>
+</section>
+<!-- Recent Activity Feed -->
+<section>
+<div class="flex justify-between items-center mb-3 px-1">
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" style="">Recent Activity</h3>
+<button class="text-primary font-label-caps text-[12px] font-bold" style="">See all</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl ios-shadow border border-surface-container-highest overflow-hidden">
+<!-- Activity Item 1 -->
+<div class="p-4 flex items-center gap-4 border-b border-surface-container-highest last:border-0">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="">directions_walk</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface" style="">Morning Walk</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">45 mins • 2.4 miles</p>
+</div>
+<span class="font-body-sm text-on-surface-variant/70" style="">8:30 AM</span>
+</div>
+<!-- Activity Item 2 -->
+<div class="p-4 flex items-center gap-4 border-b border-surface-container-highest last:border-0">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="">restaurant</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface" style="">Breakfast</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Premium Kibble Mix</p>
+</div>
+<span class="font-body-sm text-on-surface-variant/70" style="">7:15 AM</span>
+</div>
+<!-- Activity Item 3 -->
+<div class="p-4 flex items-center gap-4 border-b border-surface-container-highest last:border-0">
+<div class="w-10 h-10 rounded-lg bg-primary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="">pill</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-lg font-semibold text-on-surface" style="">Heartworm Med</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant" style="">Monthly Prevention</p>
+</div>
+<span class="font-body-sm text-on-surface-variant/70" style="">Yesterday</span>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-all duration-200 z-40" style="">
+<span class="material-symbols-outlined text-[28px]" style="">add</span>
+</button>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 w-full z-50 bg-white/90 backdrop-blur-lg border-t border-stone-100 shadow-[0_-4px_12px_rgba(0,0,0,0.04)] flex justify-around items-center h-20 pb-safe px-6 w-full">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-emerald-600 font-semibold active:scale-90 transition-all duration-200" href="#" style="">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>home</span>
+<span class="font-manrope text-[11px] font-medium mt-0.5" style="">Home</span>
+</a>
+<!-- Health -->
+<a class="flex flex-col items-center justify-center text-stone-400 hover:text-emerald-500 active:scale-90 transition-all duration-200" href="#" style="">
+<span class="material-symbols-outlined" style="">medical_services</span>
+<span class="font-manrope text-[11px] font-medium mt-0.5" style="">Health</span>
+</a>
+<!-- Reports -->
+<a class="flex flex-col items-center justify-center text-stone-400 hover:text-emerald-500 active:scale-90 transition-all duration-200" href="#" style="">
+<span class="material-symbols-outlined" style="">bar_chart</span>
+<span class="font-manrope text-[11px] font-medium mt-0.5" style="">Reports</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-stone-400 hover:text-emerald-500 active:scale-90 transition-all duration-200" href="#" style="">
+<span class="material-symbols-outlined" style="">settings</span>
+<span class="font-manrope text-[11px] font-medium mt-0.5" style="">Settings</span>
+</a>
+</nav>
+</body></html>

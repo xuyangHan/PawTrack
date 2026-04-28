@@ -15,50 +15,35 @@ PawTrack is a simple iOS app for tracking pet health and daily activities, desig
 
 Pet owners often rely on memory when describing symptoms to vets. PawTrack aims to replace guesswork with structured, reliable data.
 
-## 🛠 Tech Stack (planned)
+## 🛠 Tech Stack 
 
 * SwiftUI
 * SwiftData / CoreData
 * Local Notifications
 * PDF / CSV export
 
-## 🚀 Roadmap
+## Design
 
-### Phase 1 – Foundation
+Key flows and screens are documented in `design/` with both static previews and HTML prototypes.
 
-* Project setup
-* Data models (Pet, LogEntry, WeightRecord)
-* Basic navigation
+### Core pages
 
-### Phase 2 – Core Features
+- **Welcome** - first-launch onboarding and app overview. [Preview](design/welcome_to_pawtrack/screen.png) | [Prototype](design/welcome_to_pawtrack/code.html)
+- **Home Dashboard** - daily snapshot with quick access to logging actions. [Preview](design/home_dashboard/screen.png) | [Prototype](design/home_dashboard/code.html)
+- **Unified Log Entry** - central entry point for adding health records quickly. [Preview](design/unified_log_entry/screen.png) | [Prototype](design/unified_log_entry/code.html)
+- **Health Reports** - trend-focused summaries designed for vet discussions. [Preview](design/unified_health_reports/screen.png) | [Prototype](design/unified_health_reports/code.html)
 
-* Pet profile UI
-* Logging system (activity, food, weight)
-* Local data persistence
+### Log entry variants
 
-### Phase 3 – Smart UX
+- **New Activity Log** - symptom, behavior, and event-specific activity records. [Preview](design/new_activity_log/screen.png) | [Prototype](design/new_activity_log/code.html)
+- **New Food/Water Log** - meal and hydration tracking with structured inputs. [Preview](design/new_food_water_log/screen.png) | [Prototype](design/new_food_water_log/code.html)
+- **New Medication Log** - dosage, schedule, and medication adherence records. [Preview](design/new_medication_log/screen.png) | [Prototype](design/new_medication_log/code.html)
 
-* Quick log actions
-* Tagging system for symptoms
-* Attach photos to logs
+### Pet profile pages
 
-### Phase 4 – Reminders & Export
-
-* Notification scheduling
-* Report generation (PDF/CSV)
-* Date-range filtering
-
-### Phase 5 – Polish
-
-* UI refinement
-* Error handling
-* Performance improvements
-
-## 📌 Future Ideas
-
-* iCloud sync
-* Multi-device support
-* Vet sharing link
+- **Pet Profile** - high-level pet identity and profile overview. [Preview](design/pet_profile/screen.png) | [Prototype](design/pet_profile/code.html)
+- **Pet Details** - deeper pet information including background and context. [Preview](design/pet_details/screen.png) | [Prototype](design/pet_details/code.html)
+- **Pet Photo** - pet image selection and profile photo display. [Preview](design/pet_photo/screen.png) | [Prototype](design/pet_photo/code.html)
 
 ---
 

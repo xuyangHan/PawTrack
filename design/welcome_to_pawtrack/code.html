@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to PawTrack</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#faf9f7",
+                        "surface": "#faf9f7",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f3130",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-background": "#1a1c1b",
+                        "on-tertiary-fixed": "#2f1400",
+                        "outline": "#6f7a73",
+                        "surface-dim": "#dadad8",
+                        "on-primary-fixed-variant": "#00513a",
+                        "surface-container": "#efeeec",
+                        "secondary-container": "#a2cdff",
+                        "primary-fixed-dim": "#88d6b4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f4f3f1",
+                        "primary": "#146b4f",
+                        "surface-tint": "#146b4f",
+                        "on-primary-fixed": "#002115",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#001d35",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#ea9959",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb780",
+                        "tertiary": "#8e4e14",
+                        "primary-fixed": "#a3f3cf",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#34618d",
+                        "surface-variant": "#e3e2e0",
+                        "surface-container-high": "#e9e8e6",
+                        "on-surface": "#1a1c1b",
+                        "on-tertiary-fixed-variant": "#6f3800",
+                        "inverse-primary": "#88d6b4",
+                        "on-tertiary-container": "#653200",
+                        "secondary-fixed": "#d0e4ff",
+                        "inverse-on-surface": "#f1f1ef",
+                        "secondary-fixed-dim": "#9fcafc",
+                        "background": "#faf9f7",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#004a34",
+                        "outline-variant": "#bec9c2",
+                        "on-secondary-fixed-variant": "#174974",
+                        "primary-container": "#6dbb9a",
+                        "on-surface-variant": "#3f4943",
+                        "tertiary-fixed": "#ffdcc4",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#295783"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "1.25rem",
+                        "gutter-card": "0.75rem",
+                        "padding-card": "1rem",
+                        "margin-page": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "display-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.2px", "fontWeight": "400"}],
+                        "body-lg": ["17px", {"lineHeight": "24px", "letterSpacing": "-0.4px", "fontWeight": "400"}],
+                        "label-caps": ["13px", {"lineHeight": "18px", "letterSpacing": "0.5px", "fontWeight": "600"}],
+                        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                        "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.5px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh-gradient {
+            background-color: #faf9f7;
+            background-image: 
+                radial-gradient(at 0% 0%, #a3f3cf 0px, transparent 50%),
+                radial-gradient(at 100% 100%, #d0e4ff 0px, transparent 50%);
+            background-blend-mode: soft-light;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-lg antialiased overflow-hidden">
+<!-- Onboarding suppression: Navigation shells are hidden for transactional/onboarding flows -->
+<main class="relative min-h-screen flex flex-col items-center justify-center px-margin-page bg-surface-container">
+<!-- Decorative Ambient Elements -->
+<div class="absolute inset-0 bg-mesh-gradient opacity-30 pointer-events-none"></div>
+<!-- Central Content Area -->
+<div class="relative z-10 flex flex-col items-center text-center w-full max-w-sm space-y-12">
+<!-- Hero Icon/Logo Area -->
+<div class="relative flex items-center justify-center">
+<!-- Large Decorative Glow -->
+<div class="absolute w-64 h-64 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="relative flex flex-col items-center">
+<span class="material-symbols-outlined text-[120px] text-primary select-none opacity-90" style="font-variation-settings: 'FILL' 1;">
+                        pets
+                    </span>
+<h1 class="mt-6 font-display-lg text-display-lg text-on-background tracking-tighter">
+                        PawTrack
+                    </h1>
+<p class="mt-2 font-body-lg text-on-surface-variant max-w-[280px]">
+                        Nurturing your pet's wellness journey with love and precision.
+                    </p>
+</div>
+</div>
+<!-- Action Area -->
+<div class="w-full flex flex-col space-y-4 pt-12">
+<button class="w-full bg-primary text-on-primary font-headline-md text-headline-md h-16 rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 group">
+                    Get Started
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-full h-14 font-label-caps text-label-caps text-secondary font-semibold hover:bg-secondary-fixed/30 rounded-full transition-colors active:opacity-70">
+                    I ALREADY HAVE AN ACCOUNT
+                </button>
+</div>
+</div>
+<!-- Bottom Branding Details -->
+<div class="absolute bottom-10 left-0 right-0 text-center px-8">
+<div class="flex items-center justify-center gap-4 mb-4">
+<div class="flex -space-x-3">
+<img alt="A cute golden retriever puppy" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Close-up of a friendly golden retriever puppy with warm brown eyes in a sunlit indoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy31-58uWEwfmdwDEOgVC7hNLSvi6QzvQmCl2Py1-qRlwJQvL2unaT0vgmryi5_crhST44R30xjfO3FZO97ld8QfA0B2rk2Ee-GE71-bBtCZ4QgBx6yYOcQhGgU8sBDwAr1zxiAvxSTud85Dmrkt__9bENr_VnJNZBK1qOUdS6liDAXGbyukzUsaO3sF_gcJVkNTD9xb9i6cHMYNZWdU5XxRTwe2ClaPwAfqgYR_FcTOMOqhWVEFH3Knhest0vMgajvJLSLCH5DWc3"/>
+<img alt="A domestic short hair cat looking curious" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Portrait of a curious tabby cat with bright green eyes sitting in front of a soft beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbuvQ6w-6AQhNB3VHSQkf0ItBANyOrW2M0hzwQkxzHy0YCYNB4qttPJwn-4yv9sgd7DREwEuNx8no9ZTZEzLY1EO_iDT6lUT17KIhQJ5KASpoeAafa0QUoFcjwMFQfFzJ94cvbo0z5xmbLcfaqPBM54FfgzLvi_VD6u1q7VX0vr3pjQVbyB7Zd_AKeR8MSgDr1PrQmJoetSwSamMxvZB4iC8sTm0HCUiNvBbvYGq_JAnWdmWk4U_rnVB0AL2hqj6umu976CI8UuOoz"/>
+<img alt="A small white terrier dog" class="w-10 h-10 rounded-full border-2 border-white shadow-sm" data-alt="Small fluffy white dog sitting happily on a wooden floor with soft natural lighting from a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD4kzaR78bbHjoVxjImxyye5V9lhWLUM6v6_zRKh7azDlaCK9qANnXx1azDQd0qKEFimElZXm5fiqxpCZHR-rKin8iI4pWDnJ3dLmt4EyP77yBv8mOu9FZubcQETSjrwgU8PQI92LjpGUIFGETNWAykFe8lUhAeowGyZAY9lOr8BpaY3KvZzFs655IQANgKwG0sDQeGbUcBWlJ2UVaQdzUWq_YpQdyMd5bqUATPgbLvoG4NLQkvR1K9Tjr2eY6TxqrYZu2NuBWLenS"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Join <span class="font-bold text-primary">10k+</span> pet parents
+                </p>
+</div>
+<p class="font-body-sm text-body-sm text-outline opacity-60">
+                Crafted with care for every tail wag.
+            </p>
+</div>
+</main>
+<!-- App Overlay for Translucency Effects -->
+<div class="fixed inset-0 pointer-events-none ring-1 ring-inset ring-white/10"></div>
+</body></html>
