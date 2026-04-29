@@ -4,19 +4,19 @@ overview: Build PawTrack as a SwiftUI iOS app in staged phases, starting with ar
 todos:
   - id: project-foundation
     content: Scaffold SwiftUI app structure, DI container, SwiftData setup, design tokens, base components, and tab shell.
-    status: pending
+    status: completed
   - id: data-domain
     content: Implement SwiftData entities, enums, repositories, and validation rules with preview/test fixtures.
-    status: pending
+    status: completed
   - id: mvp-flows
     content: Deliver onboarding/profile, unified logging flows, and dashboard snapshot as the first usable MVP.
-    status: pending
+    status: completed
   - id: insights-and-reminders
     content: Add weight timeline, reports aggregation/charts, and reminder notifications with robust edge-case handling.
-    status: pending
+    status: completed
   - id: export-and-ship
     content: Implement PDF/CSV export, share flow, accessibility polish, QA pass, and TestFlight preparation.
-    status: pending
+    status: completed
 isProject: false
 ---
 
